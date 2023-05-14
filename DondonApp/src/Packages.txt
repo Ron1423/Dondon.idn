@@ -1,0 +1,14 @@
+Navigating Between Screens
+Step 1 :
+npm install @react-navigation/native @react-navigation/native-stack
+Step 2 : 
+npm install react-native-screens react-native-safe-area-context
+
+Swipe Button
+Install : 
+npm i rn-swipe-button
+
+Image Slider Box
+Install : 
+npm i react-native-image-slider-box
+
