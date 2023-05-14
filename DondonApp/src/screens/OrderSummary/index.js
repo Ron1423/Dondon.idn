@@ -1,32 +1,27 @@
-import { StyleSheet, Text, View,TouchableOpacity,ScrollView } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { Header,ButtonAT,ButtonOS,Gap,FooterOS} from '../../components';
+import { Header,Gap,Footer,OrderList,OrderType } from '../../components';
 import { profile } from '../../assets';
-import { Logo } from '../../assets';
-
 
 const OrderSummary = ({navigation}) => {
   return (
-    // <ScrollView>
-    <View style = {styles.bodyView}>
-         <Header isHeader={true} IcProf={profile} onBack={() => navigation.goBack()} toSignIn={()=>navigation.navigate('SignIn')}/>
+    <View style = {[styles.bodyView,styles.shadowProp]}>
+      <Header isHeader={true} IcProf={profile} onBack={() => navigation.goBack()} toSignIn={()=>navigation.navigate('SignIn')}/>
         <View style = {styles.ATView}>
-            <Text style ={styles.order}>Order</Text> 
-            <Text style ={styles.odrsum}>Order Summary </Text>  
+            <Text style ={styles.order}>Order</Text>
+            <View style={styles.orderView}>
+              <OrderType/>
+            </View>
             <Gap height={25}/>
-            <ButtonOS text={'Delivery'} />
-            {/* onPress={()=>navigation.navigate('',{title :''})} */}
+            <Text style ={styles.odrsum}>Order Summary </Text>  
             <View style={[styles.appContainer,styles.shadowProp]} activeOpacity={0.70}>
-              <Text style={styles.appText}>1x</Text>
-              <Text style={styles.appText2}>Ayam Geprek</Text>
-              <Text style={styles.appText3}>Rp 20.000</Text> 
+              <OrderList amount={'1'} name={'Ayam Rempah'} price={'20.000'}/>
+              <Gap height={15}/>
+              <OrderList amount={'1'} name={'Ayam Rempah'} price={'20.000'}/>
             </View>
         </View>
-        
-        <FooterOS onPress={()=>navigation.navigate('OrderSuccess')}/>
-        
+        <Footer isPay={true} isPayText={true} priceT={'40.000'} justify='center' onPress={()=>navigation.navigate('OrderSuccess')}/>
     </View>
-    /* </ScrollView> */
   )
 }
 
@@ -34,11 +29,14 @@ export default OrderSummary;
 
 const styles = StyleSheet.create({
     bodyView : {
-        flexGrow : 1,
-        justifyContent : 'space-between',
+      flexGrow : 1,
+      justifyContent : 'space-between',
+      backgroundColor : 'white'
     },
 
-    
+    ATView : {
+      alignItems : 'center',
+    },
 
     order :{
       fontFamily : 'Poppins',
@@ -47,8 +45,17 @@ const styles = StyleSheet.create({
       fontSize : 20,
       color : '#000000',
       lineHeight : 24,
-      top : -141,
-      right : -30
+      right : 140,
+      marginBottom : 20
+    },
+
+    orderView : {
+      elevation: 3.5,
+      backgroundColor:'#FFD400',
+      justifyContent : 'space-between',
+      borderRadius: 10,
+      padding: 20,
+      width : 350,
     },
 
     odrsum :{
@@ -58,68 +65,25 @@ const styles = StyleSheet.create({
       fontSize : 20,
       color : '#000000',
       lineHeight : 24,
-      bottom : -1,
-      right : -30
+      right : 90,
+      marginVertical : 20
     },
 
     appContainer: {
       elevation: 3.5,
-      backgroundColor:'white' ,
+      backgroundColor:'white',
+      justifyContent : 'space-between',
       borderRadius: 10,
-      paddingVertical: 50,
+      padding: 20,
       width : 350,
-      bottom : 120,
-      right : -28
-      
     },
+
     shadowProp: {
       shadowColor: '#171717',
       shadowOffset: {width: -2, height: 4},
       shadowOpacity: 0.2,
       shadowRadius: 3,
     },
-    appText: {
-        fontSize: 18,
-        color: '#000000',
-        fontWeight: "bold",
-        alignSelf: "center",
-        fontFamily : 'Poppins',
-        fontStyle : 'normal',
-        fontWeight : 600,
-        fontSize : 17,
-        lineHeight : 23,
-        right : 150,
-        top : -15
-    },
-
-    appText2: {
-      fontSize: 18,
-      color: '#000000',
-      fontWeight: "bold",
-      alignSelf: "center",
-      fontFamily : 'Poppins',
-      fontStyle : 'normal',
-      fontWeight : 600,
-      fontSize : 17,
-      lineHeight : 23,
-      right : 50,
-      top : -35
-  },
-
-  appText3: {
-    fontSize: 18,
-    color: '#000000',
-    fontWeight: "bold",
-    alignSelf: "center",
-    fontFamily : 'Poppins',
-    fontStyle : 'normal',
-    fontWeight : 600,
-    fontSize : 17,
-    lineHeight : 23,
-    left: 120,
-    top : -58
-}
-   
 })
 
 

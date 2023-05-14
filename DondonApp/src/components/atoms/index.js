@@ -1,8 +1,8 @@
 import ButtonAT from "./ButtonAT";
-import ButtonOS from "./ButtonOS";
 import TextInputAT from "./TextInputAT";
 import Gap from "./Gap";
 import Line from "./Line";
+import OrderList from "./Order List";
 
-export { ButtonAT, ButtonOS, TextInputAT, Gap, Line };
+export { ButtonAT, TextInputAT, Gap, Line, OrderList };
 

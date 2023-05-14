@@ -12,3 +12,5 @@ Image Slider Box
 Install : 
 npm i react-native-image-slider-box
 
+Radio Button : 
+npm install react-native-paper

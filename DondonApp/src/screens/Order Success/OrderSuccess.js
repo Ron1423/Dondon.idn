@@ -7,7 +7,7 @@ import { Header } from "../../components";
 const OrderSuccess = ({navigation}) => {
   return (
     <View style={styles.orderSuccess}>
-      <Header isHeader={true} IcProf={profile} onBack={() => navigation.goBack()} toSignIn={()=>navigation.navigate('SignIn')}/>
+      <Header isHeader={true} IcProf={profile} onBack={() => navigation.goBack()} onPress={()=>navigation.navigate('SignIn')}/>
       <ImageBackground style = {styles.bulatView} source={bulat}>
         <View>
           <Text style={styles.terimaKasih}>Terima Kasih</Text>

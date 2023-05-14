@@ -3,7 +3,7 @@ import React from 'react'
 import { icProfile,back,logo2 } from '../../../assets';
 import { Gap } from '../../atoms';
 
-const Header = ({ isHeader,isProfile,isAbout,onBack,toSignIn,title,name,IcProf={icProfile}}) => {
+const Header = ({ isHeader,isProfile,isAbout,onBack,onPress,title,name,IcProf={icProfile}}) => {
   return (
     <View style = {styles.mrgn}>
       {onBack && (    
@@ -18,7 +18,7 @@ const Header = ({ isHeader,isProfile,isAbout,onBack,toSignIn,title,name,IcProf={
           <Gap width={80}/>
           <Image source={logo2} style={styles.logo2}/>
           <Gap width={70}/>
-          <TouchableOpacity onPress={toSignIn}>
+          <TouchableOpacity onPress={onPress}>
             <Image style = {styles.image2} source={IcProf}/>
           </TouchableOpacity>
         </View>
@@ -28,7 +28,7 @@ const Header = ({ isHeader,isProfile,isAbout,onBack,toSignIn,title,name,IcProf={
         {isProfile && (
           <View>  
             <Text style = {styles.subHead}>{name}</Text>
-            <TouchableOpacity onPress={toSignIn}>
+            <TouchableOpacity onPress={onPress}>
               <Image style = {styles.image} source={IcProf}/>
             </TouchableOpacity>
           </View>
@@ -37,7 +37,7 @@ const Header = ({ isHeader,isProfile,isAbout,onBack,toSignIn,title,name,IcProf={
       <Gap width={60}/>
       {isAbout &&(
         <View>
-          <TouchableOpacity onPress={toSignIn}>
+          <TouchableOpacity onPress={onPress}>
               <Image style = {styles.image1} source={IcProf}/>
           </TouchableOpacity>
         </View>

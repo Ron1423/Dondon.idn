@@ -7,7 +7,7 @@ import { logo3 } from '../../assets';
 const AboutUs = ({navigation}) => {
   return (
     <View style = {styles.container}>
-    <Header title={"Tentang Kami"} isAbout={true} IcProf={profile} onBack={() => navigation.goBack()} toSignIn={()=>navigation.navigate('SignIn')}/>
+    <Header title={"Tentang Kami"} isAbout={true} IcProf={profile} onBack={() => navigation.goBack()} onPress={()=>navigation.navigate('SignIn')}/>
         <View style = {{ alignItems : 'center', marginVertical : 20}}>
             <View>
                 <Image source={logo3} style = {styles.imageStyle}/>

@@ -1,12 +1,12 @@
 import { StyleSheet, View, Linking } from 'react-native'
-import React from 'react'
-import { Header,Footer ,Slider,HomeButton } from '../../components';
+import { Header,Footer,Slider,HomeButton } from '../../components';
 import { profile,icFoods, icDrinks, icSnacks, icInfo, icHistory, icPay, icFb, icInstagram, icTikTok } from '../../assets';
+import React from 'react';
 
 const Home = ({navigation}) => {
   return (
     <View style = {styles.bodyView}>
-        <Header title={"Selamat Datang"} name={"Deo Timothy"} isProfile={true} IcProf={profile} toSignIn={()=>navigation.navigate('SignIn')}/>
+        <Header title={"Selamat Datang"} name={"Deo Timothy"} isProfile={true} IcProf={profile} onPress={()=>navigation.navigate('SignIn')}/>
         <Slider/>
         <View style = {styles.ATView}>
             <View style = {styles.btnView}>
@@ -25,7 +25,7 @@ const Home = ({navigation}) => {
                 <HomeButton pict={icTikTok} isSosmed={true} onPress={() =>Linking.openURL('https://www.tiktok.com/@dondon.idn')}/>
             </View>
         </View>
-        <Footer onPress={()=>navigation.navigate('OrderSummary')}/>
+        <Footer isPesanan = {true} items={'2 Items'} price={'40.000'} onPress={()=>navigation.navigate('OrderSummary')}/>
     </View>
   )
 }
