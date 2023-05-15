@@ -7,7 +7,7 @@ const Home = ({navigation}) => {
   return (
     <View style = {styles.bodyView}>
         <Header title={"Selamat Datang"} name={"Deo Timothy"} isProfile={true} IcProf={profile} onPress={()=>navigation.navigate('SignIn')}/>
-        <Slider/>
+        <Slider onPress={()=>navigation.navigate('Makanan')} />
         <View style = {styles.ATView}>
             <View style = {styles.btnView}>
                 <HomeButton text={'Makanan'} pict={icFoods} isItem={true} onPress={()=>navigation.navigate('Menus',{title : 'Makanan',})}/>

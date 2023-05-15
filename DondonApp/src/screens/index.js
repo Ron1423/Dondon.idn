@@ -7,5 +7,6 @@ import Intro from "./Intro";
 import OrderSummary from "./OrderSummary";
 import AboutUs from "./AboutUs";
 import OrderSuccess from "./Order Success/OrderSuccess";
+import Makanan from "./Makanan";
 
-export { Splash,Intro,SignIn,SignUp,Home,Menus,OrderSummary,AboutUs,OrderSuccess };
+export { Splash,Intro,SignIn,SignUp,Home,Menus,OrderSummary,AboutUs,OrderSuccess,Makanan };
