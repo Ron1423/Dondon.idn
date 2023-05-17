@@ -12,7 +12,7 @@ const Home = ({navigation}) => {
             <View style = {styles.btnView}>
                 <HomeButton text={'Makanan'} pict={icFoods} isItem={true} onPress={()=>navigation.navigate('Menus',{title : 'Makanan',})}/>
                 <HomeButton text={'Minuman'} pict={icDrinks} isItem={true} onPress={()=>navigation.navigate('Menus',{title : 'Minuman',})}/>
-                <HomeButton text={'Camilan'} pict={icSnacks} isItem={true} onPress={()=>navigation.navigate('Menus',{title : 'Camilan',})}/>
+                <HomeButton text={'Camilan'} pict={icSnacks} isItem={true} onPress={()=>navigation.navigate('Menus',{title : 'Snack',})}/>
             </View>
             <View style = {styles.btnView}>
                 <HomeButton text={'Metode Pembayaran'} isItem={true} pict={icPay} onPress={()=>navigation.navigate('OrderSummary')}/>
