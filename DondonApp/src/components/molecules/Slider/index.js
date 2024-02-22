@@ -3,7 +3,7 @@ import React from 'react'
 
 import { SliderBox } from "react-native-image-slider-box";
 
-const Slider = () => {
+const Slider = (onPress) => {
 
     const images = [
     require('../../../assets/sliderImg/slider1.png'),

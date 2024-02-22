@@ -1,23 +1,23 @@
 import { StyleSheet, View, Linking } from 'react-native'
 import { Header,Footer,Slider,HomeButton } from '../../components';
-import { profile,icFoods, icDrinks, icSnacks, icInfo, icHistory, icPay, icFb, icInstagram, icTikTok } from '../../assets';
+import { GProf,icFoods, icDrinks, icSnacks, icInfo, icHistory, icPay, icFb, icInstagram, icTikTok } from '../../assets';
 import React from 'react';
 
 const Home = ({navigation}) => {
   return (
     <View style = {styles.bodyView}>
-        <Header title={"Selamat Datang"} name={"Deo Timothy"} isProfile={true} IcProf={profile} onPress={()=>navigation.navigate('SignIn')}/>
-        <Slider/>
+        <Header title={"Welcome"} name={"Guest"} isProfile={true} IcProf={true} onPress={()=>navigation.navigate('SignIn')}/>
+        <Slider onPress={()=>navigation.navigate('Makanan')} />
         <View style = {styles.ATView}>
             <View style = {styles.btnView}>
-                <HomeButton text={'Makanan'} pict={icFoods} isItem={true} onPress={()=>navigation.navigate('Menus',{title : 'Makanan',})}/>
-                <HomeButton text={'Minuman'} pict={icDrinks} isItem={true} onPress={()=>navigation.navigate('Menus',{title : 'Minuman',})}/>
-                <HomeButton text={'Camilan'} pict={icSnacks} isItem={true} onPress={()=>navigation.navigate('Menus',{title : 'Camilan',})}/>
+                <HomeButton text={'Food'} pict={icFoods} isItem={true} onPress={()=>navigation.navigate('Menus',{title : 'Food',})}/>
+                <HomeButton text={'Drink'} pict={icDrinks} isItem={true} onPress={()=>navigation.navigate('Menus',{title : 'Drink',})}/>
+                <HomeButton text={'Other'} pict={icSnacks} isItem={true} onPress={()=>navigation.navigate('Menus',{title : 'Other',})}/>
             </View>
             <View style = {styles.btnView}>
-                <HomeButton text={'Metode Pembayaran'} isItem={true} pict={icPay} onPress={()=>navigation.navigate('OrderSummary')}/>
-                <HomeButton text={'Riwayat Pembelian'} isItem={true} pict={icHistory} onPress={()=>navigation.navigate('OrderSuccess')}/>
-                <HomeButton text={'Tentang Kami'} isItem={true} pict={icInfo} onPress={()=>navigation.navigate('AboutUs')}/>
+                <HomeButton text={'Payment'} isItem={true} pict={icPay} onPress={()=>navigation.navigate('OrderSummary')}/>
+                <HomeButton text={'Receipt'} isItem={true} pict={icHistory} onPress={()=>navigation.navigate('OrderSuccess')}/>
+                <HomeButton text={'About Us'} isItem={true} pict={icInfo} onPress={()=>navigation.navigate('AboutUs')}/>
             </View>
             <View style = {styles.smView}>
                 <HomeButton pict={icFb} isSosmed={true} onPress={() =>Linking.openURL('https://www.facebook.com/profile.php?id=100091851280080&mibextid=ZbWKwL')}/>

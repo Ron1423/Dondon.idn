@@ -1,9 +1,9 @@
 import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { icProfile,back,logo2 } from '../../../assets';
+import { GProf,back,logo2 } from '../../../assets';
 import { Gap } from '../../atoms';
 
-const Header = ({ isHeader,isProfile,isAbout,onBack,onPress,title,name,IcProf={icProfile}}) => {
+const Header = ({ isHeader,isProfile,isAbout,onBack,onPress,title,name,IcProf={GProf}}) => {
   return (
     <View style = {styles.mrgn}>
       {onBack && (    
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     },
 
     back : {
-      marginLeft : 24,
+      marginLeft : 15,
       padding : 15,
     },
 
@@ -70,8 +70,8 @@ const styles = StyleSheet.create({
     },
 
     logo2 : {
-      width : 90,
-      height : 90,
+      width : 75,
+      height : 75,
     },
 
     headerView : {
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
       height : 60,
       width : 60,
       borderRadius : 60,
-      left : 290,
+      left : 250,
     },
 
     image2 : {

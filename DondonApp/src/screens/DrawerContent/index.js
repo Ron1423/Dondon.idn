@@ -7,9 +7,6 @@ import {
     Caption,
     Paragraph,
     Drawer,
-    Text,
-    TouchableRipple,
-    Switch
 } from 'react-native-paper';
 import {
     DrawerContentScrollView,
@@ -17,14 +14,11 @@ import {
 } from '@react-navigation/drawer';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-
-import { AuthContext } from '../../components';
+import { logo2 } from '../../assets';
 
 export function DrawerContent(props) {
 
     const paperTheme = useTheme();
-
-    const { signOut, toggleTheme } = React.useContext(AuthContext);
 
     return(
         <View style={{flex:1}}>
@@ -33,25 +27,19 @@ export function DrawerContent(props) {
                     <View style={styles.userInfoSection}>
                         <View style={{flexDirection:'row',marginTop: 15}}>
                             <Avatar.Image 
-                                source={{
-                                    uri: 'https://api.adorable.io/avatars/50/abott@adorable.png'
-                                }}
+                                source={logo2}
                                 size={50}
                             />
                             <View style={{marginLeft:15, flexDirection:'column'}}>
-                                <Title style={styles.title}>John Doe</Title>
-                                <Caption style={styles.caption}>@j_doe</Caption>
+                                <Title style={styles.title}>Guest</Title>
+                                <Caption style={styles.caption}>@guest</Caption>
                             </View>
                         </View>
 
                         <View style={styles.row}>
                             <View style={styles.section}>
                                 <Paragraph style={[styles.paragraph, styles.caption]}>80</Paragraph>
-                                <Caption style={styles.caption}>Following</Caption>
-                            </View>
-                            <View style={styles.section}>
-                                <Paragraph style={[styles.paragraph, styles.caption]}>100</Paragraph>
-                                <Caption style={styles.caption}>Followers</Caption>
+                                <Caption style={styles.caption}>Points</Caption>
                             </View>
                         </View>
                     </View>
@@ -68,54 +56,28 @@ export function DrawerContent(props) {
                             label="Home"
                             onPress={() => {props.navigation.navigate('Home')}}
                         />
-                        <DrawerItem 
-                            icon={({color, size}) => (
-                                <Icon 
-                                name="account-outline" 
-                                color={color}
-                                size={size}
+                                <DrawerItem 
+                                    icon={({color, size}) => (
+                                        <Icon 
+                                        name="bookmark-outline" 
+                                        color={color}
+                                        size={size}
+                                        />
+                                    )}
+                                    label="All Menus"
+                                    onPress={() => {props.navigation.navigate('Makanan')}}
                                 />
-                            )}
+                        <DrawerItem 
                             label="Sign In"
                             onPress={() => {props.navigation.navigate('SignIn')}}
                         />
                         <DrawerItem 
-                            icon={({color, size}) => (
-                                <Icon 
-                                name="bookmark-outline" 
-                                color={color}
-                                size={size}
-                                />
-                            )}
                             label="Sign Up"
                             onPress={() => {props.navigation.navigate('SignUp')}}
                         />
                     </Drawer.Section>
-                    <Drawer.Section title="Preferences">
-                        <TouchableRipple onPress={() => {toggleTheme()}}>
-                            <View style={styles.preference}>
-                                <Text>Dark Theme</Text>
-                                <View pointerEvents="none">
-                                    <Switch value={paperTheme.dark}/>
-                                </View>
-                            </View>
-                        </TouchableRipple>
-                    </Drawer.Section>
                 </View>
             </DrawerContentScrollView>
-            <Drawer.Section style={styles.bottomDrawerSection}>
-                <DrawerItem 
-                    icon={({color, size}) => (
-                        <Icon 
-                        name="exit-to-app" 
-                        color={color}
-                        size={size}
-                        />
-                    )}
-                    label="Sign Out"
-                    onPress={() => {signOut()}}
-                />
-            </Drawer.Section>
         </View>
     );
 }

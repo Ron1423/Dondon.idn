@@ -5,7 +5,7 @@ const Footer = ({ onPress,items,price,priceT,isPay,isPesanan,isPayText,justify='
   return (
         <View style = {styles.areaView}>
             {isPesanan &&(
-                <Text style = {styles.textView}>Pesanan</Text>
+                <Text style = {styles.textView}>Order</Text>
             )}
             {isPayText&&(
                 <View style={styles.isPay}>
@@ -17,7 +17,7 @@ const Footer = ({ onPress,items,price,priceT,isPay,isPesanan,isPayText,justify='
                 <View style = {styles.button(justify)}>
                     {isPay &&(
                         <View style={styles.payView}>
-                            <Text style = {styles.textPay}>Bayar</Text>
+                            <Text style = {styles.textPay}>Pay</Text>
                         </View>
                     )}
                     <Text style = {styles.textDet}>{items}</Text>
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     },
 
     button : justify => ({
-        width : 360,
+        width : 340,
         height : 50,
         backgroundColor : '#FFD400',
         flexDirection : 'row',
