@@ -12,14 +12,14 @@ const Intro = ({navigation}) => {
         <Text style={styles.tag}>#dondon4lyfe</Text>
       </View>
       <View style={styles.textView}>
-        <Text style={styles.titleView}>SELAMAT DATANG, DONDONERS!</Text>
-        <Text style={styles.subtitle}>BUAT AKUN DAN KLAIM HADIAH MENARIK!</Text>
+        <Text style={styles.titleView}>WELCOME,{"\n"}DONDONERS!</Text>
+        <Text style={styles.subtitle}>Sign up now and start earning rewards!</Text>
       </View>
       <View style={styles.swipeView}>
         <SwipeButton
           thumbIconImageSource={next}
           disabled={false}
-          title = "Geser untuk memesan!"
+          title = "Swipe to order!"
           titleColor='white'
           railBackgroundColor='#FFC52E'
           railBorderColor='#FFC52E'
@@ -27,7 +27,7 @@ const Intro = ({navigation}) => {
           thumbIconBorderColor='#FFC52E'
           railFillBackgroundColor='#FFC52E'
           railFillBorderColor='#FFC52E'
-          width={370}
+          width={340}
           onSwipeSuccess={() =>  {
             navigation.navigate("Home")
           }}
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
   },
 
   swipeView : {
-    alignItems : 'center',
+    alignItems : 'flex-start',
     top : 550
   }
 })

@@ -1,13 +1,13 @@
 import { Image, StyleSheet, Text, View, TouchableOpacity, Linking } from 'react-native'
 import React, {useState} from 'react'
 import { Gap, Header } from '../../components'
-import { IGvector, profile } from '../../assets';
+import { IGvector } from '../../assets';
 import { logo3 } from '../../assets';
 
 const AboutUs = ({navigation}) => {
   return (
     <View style = {styles.container}>
-    <Header title={"Tentang Kami"} isAbout={true} IcProf={profile} onBack={() => navigation.goBack()} onPress={()=>navigation.navigate('SignIn')}/>
+    <Header title={"About Us"} isAbout={true} onBack={() => navigation.goBack()} onPress={()=>navigation.navigate('SignIn')}/>
         <View style = {{ alignItems : 'center', marginVertical : 20}}>
             <View>
                 <Image source={logo3} style = {styles.imageStyle}/>
@@ -31,7 +31,7 @@ const AboutUs = ({navigation}) => {
         <Gap height={20}/>
         <View style = {styles.alamatContainter}>
             <View>
-                <Text style = {styles.subTitle}>Alamat</Text>
+                <Text style = {styles.subTitle}>Address</Text>
                 <Gap height={7}/>
                 <Text style = {styles.textStyle}>CX8P+WMW, Airmadidi Atas, Airmadidi, North Minahasa Regency, North Sulawesi</Text>
                 <Gap height={10}/>

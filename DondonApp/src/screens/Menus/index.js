@@ -50,12 +50,12 @@ const Menus = ({ route, navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Header isHeader={true} IcProf={profile} onBack={() => navigation.goBack()} onPress={() => navigation.navigate('SignIn')} />
+      <Header isHeader={true} IcProf={true} onBack={() => navigation.goBack()} onPress={() => navigation.navigate('SignIn')} />
       <ScrollView style={{ backgroundColor: '#FFFFFF' }}>
         <View>
-          {title === 'Makanan' && renderFoodCategory()}
-          {title === 'Minuman' && renderBeverageDrinkCategory()}
-          {title === 'Snack' && renderSnackCategory()}
+          {title === 'Food' && renderFoodCategory()}
+          {title === 'Drink' && renderBeverageDrinkCategory()}
+          {title === 'Other' && renderSnackCategory()}
         </View>
       </ScrollView>
       <Footer isPesanan={true} items={'2 Items'} price={'40.000'} onPress={() => navigation.navigate('OrderSummary')} />

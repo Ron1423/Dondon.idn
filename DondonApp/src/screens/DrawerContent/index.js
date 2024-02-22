@@ -14,7 +14,7 @@ import {
 } from '@react-navigation/drawer';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { profile } from '../../assets';
+import { logo2 } from '../../assets';
 
 export function DrawerContent(props) {
 
@@ -27,12 +27,12 @@ export function DrawerContent(props) {
                     <View style={styles.userInfoSection}>
                         <View style={{flexDirection:'row',marginTop: 15}}>
                             <Avatar.Image 
-                                source={profile}
+                                source={logo2}
                                 size={50}
                             />
                             <View style={{marginLeft:15, flexDirection:'column'}}>
-                                <Title style={styles.title}>Timothy Kabo</Title>
-                                <Caption style={styles.caption}>@deo</Caption>
+                                <Title style={styles.title}>Guest</Title>
+                                <Caption style={styles.caption}>@guest</Caption>
                             </View>
                         </View>
 

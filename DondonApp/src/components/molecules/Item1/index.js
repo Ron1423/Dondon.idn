@@ -43,13 +43,13 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         backgroundColor: '#FFFFFF',
         elevation: 4,
-        width : 180,
+        width : 160,
         alignItems : 'center',
-        marginBottom : 20
+        margin : 20,
       },
       imageContainer: {
         width: '100%',
-        height: 200,
+        height: 150,
         borderRadius: 8,
         overflow: 'hidden',
       },

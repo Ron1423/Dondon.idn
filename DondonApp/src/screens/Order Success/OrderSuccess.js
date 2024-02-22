@@ -10,7 +10,7 @@ const OrderSuccess = ({navigation}) => {
       <Header isHeader={true} IcProf={profile} onBack={() => navigation.goBack()} onPress={()=>navigation.navigate('SignIn')}/>
       <ImageBackground style = {styles.bulatView} source={bulat}>
         <View>
-          <Text style={styles.terimaKasih}>Terima Kasih</Text>
+          <Text style={styles.terimaKasih}>THANK YOU</Text>
         </View>
         <TouchableOpacity onPress={()=>navigation.navigate('Home')}>
           <Image
@@ -21,8 +21,7 @@ const OrderSuccess = ({navigation}) => {
         </TouchableOpacity>
         <Text
           style={[styles.pesananAndaSedang, styles.dondonidnTypo]}
-        >{`Pesanan anda sedang dibuat,
-        silahkan pesan lagi...`}</Text>
+        >{`Your order is being processed.`}</Text>
       </ImageBackground>
       <View style={styles.InstaC}>
         <Image
