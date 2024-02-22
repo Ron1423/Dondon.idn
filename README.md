@@ -4,7 +4,7 @@ This is my final project in Mobile Development subject. I worked on this project
 DondonApp is a front-end user-friendly React Native application designed to revolutionize the restaurant dining experience.
 It empowers restaurants and customers by providing a smooth and efficient online food ordering and in-app payment processing platform.
 
-
+![Dondon](https://github.com/Ron1423/Dondon.idn/assets/90587397/0694ab32-14cf-4443-9668-378c8bcf4048)
 
 ## Getting Started:
 
